@@ -36,6 +36,11 @@
             text-align: center;
         }
 
+        h3{
+            text-align: center;
+            font-size: 1em;
+        }
+
         #ID {
             text-align: center;
         }
@@ -339,7 +344,7 @@
                     infojuego.innerHTML = `<div class="informacion"><br><br>
                                                 <h1 id="titulo">${juego['Nombre']}</h1>
                                                 <h2 id="precio">Q.${juego['precio']}</h2>
-
+                                                <h3 id="categorias">${juego['categoria1']},${juego['categoria2']},${juego['categoria3']}</h3>
                                                 <div>
                                                     <p class="descripcion">${juego['Descripcion']}</p>
                                                 </div>
