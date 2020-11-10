@@ -418,7 +418,7 @@
                 .then(respuesta => {
                     console.log(respuesta["datos"])
                     var juego = respuesta["datos"];
-                    var infojuego = document.querySelector('#entry-content')
+                    var infojuego = document.querySelector('#juego')
 
                     infojuego.innerHTML = `<div class="informacion"><br><br>
                                                 <h1 id="titulo">${juego['Nombre']}</h1>
