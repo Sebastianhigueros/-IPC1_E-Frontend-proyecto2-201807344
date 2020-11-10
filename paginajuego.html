@@ -15,7 +15,8 @@
         }
 
         h1,
-        h2 {
+        h2 ,
+        h3{
             font-weight: 700;
             margin: 0 0 20px;
         }
@@ -243,7 +244,7 @@
                     infojuego.innerHTML = `<div class="informacion"><br><br>
                                                 <h1 id="titulo">${juego['Nombre']}</h1>
                                                 <h2 id="precio">Q.${juego['precio']}</h2>
-
+                                                <h3 id="categorias">${juego['categoria1']},${juego['categoria2']},${juego['categoria3']}</h3>
                                                 <div>
                                                     <p class="descripcion">${juego['Descripcion']}</p>
                                                 </div>
