@@ -508,9 +508,14 @@
                 })
         }
 
-        function pdf(){
+        function pdf() {
             var documento = new jsPDF();
 
+        }
+        function cerrarsesion() {
+            sessionStorage.removeItem('usuario')
+
+            window.location.href = 'paginaprincipal.html'
         }
 
     </script>
