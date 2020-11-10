@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
 
     <style>
@@ -200,7 +201,9 @@
             </form>
         </div>
     </div>
-    <div id=juego>
+    <div class="entry-content">
+
+
 
     </div>
 
@@ -219,19 +222,16 @@
             const queryString = window.location.search;
             const parametros = new URLSearchParams(queryString)
 
-            const id = parametros.get('id')
+            const id = parametros.get('ID_V')
 
-            fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/pagina_juego?id=' + id, {
+            fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/pagina_juego?ID_V=' + id, {
                 mode: 'cors',
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     "content-type": "application/json",
                     "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
                     "Access-Control-Allow-Credentials": "true"
                 },
-                body: JSON.stringify({
-                    ID = id
-                }),
 
             }).then(res => res.json())
 
@@ -239,20 +239,25 @@
                     console.log(err)
                 })
                 .then(respuesta => {
-                    var juego = respuesta['datos'];
-                    var infojuego = document.querySelector('#juego')
+                    var juego = respuesta["datos"];
+                    var infojuego = document.querySelector('#entry-content')
 
-                    infojuego.innerHTML = `<div class="informacion"><br><br>
-                                                <h1 id="titulo">${juego['Nombre']}</h1>
-                                                <h2 id="precio">${juego['precio']}</h2>
+                    infojuego.innerHTML = `<div class="row">
+								<div class="col-sm-6 col-md-4">
+									<div class="product-images">
+										<figure class="large-image">
+											<a href="${juego.Foto}" alt="${juego.Nombre}"></a>
+										</figure>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-8">
+									<h2 class="entry-title">${juego.Nombre}</h2>
+									<small class="price">Q.${juego.precio}</small>
 
-                                                <div>
-                                                    <p class="descripcion">${juego['Descripcion']}</p>
-                                                </div>
-                                            </div><br>
-                                            <figure class="imagen">
-                                                <img src="${juego['Foto']}" alt="imagen del juego" width="350" height="250">
-                                            </figure><br>`
+									<p>${juego.Descripcion}</p>
+
+								</div>
+							</div>`
                 })
         }
     </script>

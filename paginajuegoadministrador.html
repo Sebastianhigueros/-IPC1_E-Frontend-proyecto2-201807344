@@ -211,7 +211,7 @@
             text-decoration: underline;
         }
 
-        .nav #crear{
+        .nav #crear {
             float: right;
             display: block;
             color: white;
@@ -340,7 +340,9 @@
                 <button type="button" onclick="busquedacategoria()"><i class="fa fa-search"></i></button>
             </form>
         </div>
-    <div class="col-sm-6 col-md-8">
+    </div>
+    <div class="entry-content">
+
 
 
     </div>
@@ -387,7 +389,7 @@
                 .then(respuesta => {
                     if (respuesta['estado'] == 1) {
                         alert("El videojuego se agrego a la biblioteca")
-                        window.location.href='principalclientes.html'
+                        window.location.href = 'principalclientes.html'
                     }
                 })
 
@@ -417,6 +419,25 @@
                 })
                 .then(respuesta => {
                     console.log(respuesta["datos"])
+                    var juego = respuesta["datos"];
+                    var infojuego = document.querySelector('#entry-content')
+
+                    infojuego.innerHTML = `<div class="row">
+								<div class="col-sm-6 col-md-4">
+									<div class="product-images">
+										<figure class="large-image">
+											<a href="${juego.Foto}" alt="${juego.Nombre}"></a>
+										</figure>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-8">
+									<h2 class="entry-title">${juego.Nombre}</h2>
+									<small class="price">Q.${juego.precio}</small>
+
+									<p>${juego.Descripcion}</p>
+
+								</div>
+							</div>`
                 })
         }
 
