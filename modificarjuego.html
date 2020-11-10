@@ -209,12 +209,12 @@
 
                 var juego = sessionStorage.getItem('juego')
 
-                fetch('http://localhost:1000/info_juego',{
+                fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/info_juego',{
                     mode:'cors',
                     method:'POST',
                     headers:{
                         "Content-Type": "application/json",
-                        "Access-Control-Allow-Origin": "http://localhost:1000",
+                        "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
                         "Access-Control-Allow-Credentials": "true"
                     },
                     body:JSON.stringify({
