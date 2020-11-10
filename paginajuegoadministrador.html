@@ -341,9 +341,7 @@
             </form>
         </div>
     </div>
-    <div class="entry-content">
-
-
+    <div id=juego>
 
     </div>
 
@@ -422,22 +420,17 @@
                     var juego = respuesta["datos"];
                     var infojuego = document.querySelector('#entry-content')
 
-                    infojuego.innerHTML = `<div class="row">
-								<div class="col-sm-6 col-md-4">
-									<div class="product-images">
-										<figure class="large-image">
-											<a href="${juego.Foto}" alt="${juego.Nombre}"></a>
-										</figure>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-8">
-									<h2 class="entry-title">${juego.Nombre}</h2>
-									<small class="price">Q.${juego.precio}</small>
+                    infojuego.innerHTML = `<div class="informacion"><br><br>
+                                                <h1 id="titulo">${juego['Nombre']}</h1>
+                                                <h2 id="precio">Q.${juego['precio']}</h2>
 
-									<p>${juego.Descripcion}</p>
-
-								</div>
-							</div>`
+                                                <div>
+                                                    <p class="descripcion">${juego['Descripcion']}</p>
+                                                </div>
+                                            </div><br>
+                                            <figure class="imagen">
+                                                <img src="${juego['Foto']}" alt="imagen del juego" width="350" height="400">
+                                            </figure><br>`
                 })
         }
 
