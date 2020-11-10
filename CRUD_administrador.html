@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+            font-family: 'Open Sans', sans-serif;
+            background: #092756;
+            background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);
+        }
+
+
+        .nav {
+            background-color: rgba(42, 48, 112, 0.774);
+            overflow: hidden;
+        }
+
+        .nav #inicio {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #biblioteca {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #CRUD {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #carga {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #crear {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .nav #reportes {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #carga {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .nav #iniciar {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #inicio:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #carga:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #perfiladmin {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #perfiladmin:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #biblioteca:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #CRUD:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #carga:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #crear:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #reportes:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #iniciar:hover {
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #CRUD.active {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav .busqueda {
+            float: right;
+        }
+
+
+
+
+        .nav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+
+        .nav .busqueda button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+
+        .nav .busqueda button:hover {
+            background: #23369a;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+
+            .nav .busqueda,
+            .submenu .buscar {
+                float: none;
+            }
+
+            .nav a,
+            .nav input[type=text],
+            .nav .busqueda button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .nav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+
+        h1 {
+            font-family: "Roboto", sans-serif;
+            color: rgba(255, 115, 0, 0.795)
+        }
+
+        .login-page {
+            width: 560px;
+            padding: 2% 0 0;
+            margin: auto;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: rgba(3, 3, 3, 0.25);
+            box-shadow: 1px 1px 50px #000;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+
+
+
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .container:before,
+        .container:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container .info {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .container .info h1 {
+            margin: 0 0 15px;
+            padding: 0;
+            font-size: 36px;
+            font-weight: 300;
+            color: #1a1a1a;
+        }
+
+        .container .info span {
+            color: #4d4d4d;
+            font-size: 12px;
+        }
+
+        .container .info span a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .container .info span .fa {
+            color: #EF3B3A;
+        }
+
+        .login-page #carga {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #3D3BA2;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-page #carga:hover {
+
+            background: #363591;
+        }
+
+        .login-page #crear {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #3D3BA2;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-page #crear:hover {
+
+            background: #363591;
+        }
+
+        .login-page #modificar {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #3D3BA2;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-page #modificar:hover {
+
+            background: #363591;
+        }
+
+        .login-page #eliminar {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #3D3BA2;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-page #eliminar:hover {
+
+            background: #363591;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a id="inicio" href="principaladministrador.html">Inicio</a>
+        <a id="biblioteca" href="bibliotecaadministrador.html">Biblioteca</a>
+        <a id="CRUD" class="active">CRUD_Administrador</a>
+        <a id="reportes" href="Reportes.html">Generar reportes</a>
+        <a id="carga" href="cargamasiva.html">Carga Masiva</a>
+        <a id="crear" href="RegistroAdministradores.html">Crear Usuario</a>
+        <a id="perfiladmin" href="perfilAdministrador.html">Perfil</a>
+        <a id="iniciar" onclick="cerrarsesion()">cerrar sesion</a>
+        <div class="busqueda">
+            <form>
+                <input id="buscador" type="text" placeholder="categoria" name="search">
+                <button type="button" onclick="busquedacategoria()"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+    </div><br><br>
+    <center>
+        <h1>CRUD de administrador</h1>
+    </center>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form">
+                <a id="carga" href="paginajuegoadministrador.html">Ver juego</a><br><br><br><br>
+                <a id="crear" href="Registrojuego.html">Crear juego</a><br><br><br><br>
+                <a id="modificar" href="ingresoNombre.html">Modificar juego</a><br><br><br><br>
+                <a id="eliminar" href="nombreEliminar.html">Eliminar juego</a><br><br><br><br>
+            </form>
+        </div>
+    </div>
+    <script>
+        function cerrarsesion() {
+            sessionStorage.removeItem('usuario')
+
+            window.location.href = 'paginaprincipal.html'
+
+        }
+
+
+    </script>
+
+
+</body>

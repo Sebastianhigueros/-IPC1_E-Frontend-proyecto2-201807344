@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+            font-family: 'Open Sans', sans-serif;
+            background: #092756;
+            background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+            background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3E1D6D', endColorstr='#092756', GradientType=1);
+        }
+
+
+        .nav {
+            background-color: rgba(42, 48, 112, 0.774);
+            overflow: hidden;
+        }
+
+        .nav #inicio {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #biblioteca {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #CRUD {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #carga {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #crear {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+
+        .nav #reportes {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #carga {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #descarga {
+            font-family: "Roboto", sans-serif;
+            position: absolute;
+            text-transform: uppercase;
+            outline: 0;
+            background: #3D3BA2;
+            width: 20%;
+            top: 10%;
+            left: 400px;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+
+        #descarga:hover {
+            background: #363591;
+        }
+
+        .nav #iniciar {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #inicio:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #carga:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #perfiladmin {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .nav #perfiladmin:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #biblioteca:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #CRUD:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #carga:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #crear:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        #listas {
+            position: absolute;
+            left: 100px;
+            top: 10%;
+        }
+
+        #genera {
+            position: absolute;
+            left: 200px;
+            top: 10%;
+
+        }
+
+        #juegos {
+            position: absolute;
+            left: 900px;
+            top: 10%;
+
+        }
+
+        .nav #reportes:hover {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #iniciar:hover {
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav #CRUD.active {
+            background-color: #192b539f;
+            color: rgba(255, 115, 0, 0.795);
+            text-decoration: underline;
+        }
+
+        .nav .busqueda {
+            float: right;
+        }
+
+
+
+
+        .nav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+
+        .nav .busqueda button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+
+
+        .nav .busqueda button:hover {
+            background: #23369a;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+
+            .nav .busqueda,
+            .submenu .buscar {
+                float: none;
+            }
+
+            .nav a,
+            .nav input[type=text],
+            .nav .busqueda button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .nav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a id="inicio" href="principaladministrador.html">Inicio</a>
+        <a id="biblioteca" href="bibliotecaadministrador.html">Biblioteca</a>
+        <a id="CRUD" class="active">CRUD_Administrador</a>
+        <a id="reportes" href="Reportes.html">Generar reportes</a>
+        <a id="carga" href="cargamasiva.html">Carga Masiva</a>
+        <a id="crear" href="RegistroAdministradores.html">Crear Usuario</a>
+        <a id="perfiladmin" href="perfilAdministrador.html">Perfil</a>
+        <a id="iniciar" onclick="cerrarsesion()">cerrar sesion</a>
+        <div class="busqueda">
+            <form>
+                <input id="buscador" type="text" placeholder="categoria" name="search">
+                <button type="button" onclick="busquedacategoria()"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+    </div><br><br>
+
+    <button type="button" id="genera" onclick="mostrarinfo()">Generar</button>
+    <select name="listas" id="listas">
+        <option value="usuario">usuario</option>
+        <option value="videojuegos">videojuegos</option>
+        <option value="comentarios">comentarios</option>
+    </select><br><br>
+    <select name="juegos" id="juegos" onload="cargarjuegos()">
+
+    </select><br><br>
+    <table id="tabla">
+        <tr>
+
+        </tr>
+
+
+    </table>
+    <Button type="button" id="descarga">Descargar PDF</Button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+    <script>
+        function mostrarinfo() {
+            var informacion = document.getElementById("listas").value;
+            console.log(informacion)
+            document.getElementById("juegos").style.display = "none"
+            if (informacion == "usuario") {
+                fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/listar', {
+                    mode: 'cors',
+                    method: 'GET',
+                    headers: {
+                        "content-type": "application/json",
+                        "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
+                        "Access-Control-Allow-Credentials": "true"
+                    },
+                }).then(res => res.json())
+
+                    .catch(err => {
+                        console.log(err)
+                    })
+
+                    .then(respuesta => {
+                        document.getElementById("descarga").style.display = "block"
+                        var usuarios = respuesta
+                        var valoresTabla = document.querySelector('#tabla')
+
+                        valoresTabla.innerHTML += `<tr>
+                                                    <th>ID</th>
+                                                    <th>Nombre</th>
+                                                    <th>Apellido</th>
+                                                    <th>nombre de usuario</th>
+                                                    <th>Rol</th>
+                                                  </tr>`
+
+                        usuarios.forEach(usuario => {
+                            valoresTabla.innerHTML += ` 
+                                                        <tr>
+                                                            <th>${usuario.ID}</th>
+                                                            <th>${usuario.Nombre}</th>
+                                                            <th>${usuario.Apellido}</th>
+                                                            <th>${usuario.nombre_usuario}</th>
+                                                            <th>${usuario.tipo}</th>
+                                                        </tr>`
+                        });
+
+                    })
+            } else if (informacion == "videojuegos") {
+                fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/listar_juegos', {
+                    mode: 'cors',
+                    method: 'GET',
+                    headers: {
+                        "content-type": "application/json",
+                        "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
+                        "Access-Control-Allow-Credentials": "true"
+                    },
+                }).then(res => res.json())
+
+                    .catch(err => {
+                        console.log(err)
+                    })
+
+                    .then(respuesta => {
+                        document.getElementById("descarga").style.display = "block"
+                        var juegos = respuesta
+                        var valoresTabla = document.querySelector('#tabla')
+
+                        valoresTabla.innerHTML += ` <tr>
+                                                        <th>ID</th>
+                                                        <th>Nombre</th>
+                                                        <th>Anio</th>
+                                                        <th>precio</th>
+                                                        <th>categoria1</th>
+                                                        <th>categoria2</th>
+                                                        <th>categoria3</th>
+                                                        <th>descripcion</th>
+                                                    </tr>`
+
+                        juegos.forEach(juego => {
+                            valoresTabla.innerHTML += ` <tr>
+                                                            <th>${juego.ID_V}</th>
+                                                            <th>${juego.Nombre}</th>
+                                                            <th>${juego.Anio}</th>
+                                                            <th>${usuario.precio}</th>
+                                                            <th>${usuario.categoria1}</th>
+                                                            <th>${usuario.categoria2}</th>
+                                                            <th>${usuario.categoria3}</th>
+                                                            <th>${usuario.Descripcion}</th>
+                                                        </tr>`
+                        });
+
+                    })
+
+            } else if (informacion == "comentarios") {
+
+
+                fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/lista_comentarios', {
+                    mode: 'cors',
+                    method: 'POST',
+                    headers: {
+                        "content-type": "application/json",
+                        "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
+                        "Access-Control-Allow-Credentials": "true"
+                    },
+                    body: JSON.stringify()
+                }).then(res => res.json())
+
+                    .catch(err => {
+                        console.log(err)
+                    })
+
+                    .then(respuesta => {
+                        document.getElementById("juegos").style.display = "block"
+                        document.getElementById("descarga").style.display = "none"
+                        var comentarios = respuesta
+
+                        var valoresTabla = document.querySelector('#tabla')
+
+                        valoresTabla.innerHTML += ` <tr>
+                                                        <th>usuario</th>
+                                                        <th>fecha</th>
+                                                        <th>comentario</th>
+                                                        
+                                                    </tr>`
+                        comentarios.forEach(comentario => {
+                            valoresTabla.innerHTML += ` <tr>
+                                                            <th>${comentario.usuario}</th>
+                                                            <th>${comentario.fecha}</th>
+                                                            <th>${comentario.comentario}</th>
+                                                        </tr>`
+                        });
+
+
+                    })
+
+            }
+
+
+
+        }
+
+        function cargarjuegos() {
+            fetch('https://ipc1e-proyecto2-201807344.herokuapp.com/listar_juegos', {
+                mode: 'cors',
+                method: 'GET',
+                headers: {
+                    "content-type": "application/json",
+                    "Access-Control-Allow-Origin": "https://ipc1e-proyecto2-201807344.herokuapp.com",
+                    "Access-Control-Allow-Credentials": "true"
+                },
+            }).then(res => res.json())
+
+                .catch(err => {
+                    console.log(err)
+                })
+
+                .then(respuesta => {
+
+                    var juegos = respuesta
+
+                    var lista = document.querySelector('#juegos')
+
+                    juegos.forEach(juego => {
+
+                        lista.innerHTML += `<option value="${juego.Nombre}">${juego.Nombre}</option`
+
+                    });
+
+                })
+        }
+
+        function pdf(){
+            var documento = new jsPDF();
+
+        }
+
+    </script>
+
+
+</body>
